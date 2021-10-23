@@ -338,7 +338,7 @@
                 <p class="footer__address">
                     г. Киев, пр-т Леси Украинки, 26
                 </p>
-                <ul class="footer-list list">
+                <ul class="footer__list list">
                     <li class="footer__item item">
                         <a class="footer__link link" href="mailto:info@example.com">info@example.com</a>
                     </li>
@@ -348,7 +348,7 @@
                 </ul>
             </address>
             </div>
-            <div class="footer__container--social">
+            <div class="footer-container--social">
                 <h3 class="social__title">присоединяйтесь</h3>
                 <ul class="social__list list">
                     <li class="social-list__item">
@@ -401,48 +401,48 @@
     </footer>
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
-            <p class="modal-title">Оставьте свои данные, мы вам перезвоним<p>
-            <form class="modal-form">
+            <p class="modal__title">Оставьте свои данные, мы вам перезвоним<p>
+            <form class="modal__form">
                 <div class="client-data">
-                    <label class="label-text" for="client-name">Имя</label>
-                    <span class="client-input-icon">
-                        <input class="client-input" type="name" name="client-name" id="client-name">
-                        <svg class="modal-icon">
+                    <label class="client-data__label" for="client-name">Имя</label>
+                    <span class="client-data__input-icon">
+                        <input class="client-data__input" type="name" name="client-name" id="client-name">
+                        <svg class="client-data__icon">
                             <use href="./images/icons.svg#icon-person-black"></use>
                         </svg>
                     </span>
                 </div>
                 <div class="client-data">
-                    <label class="label-text" for="client-tel">Телефон</label>
-                    <span class="client-input-icon">
-                        <input class="client-input" type="tel" name="client-tel" id="client-tel">
-                        <svg class="modal-icon">
+                    <label class="client-data__label" for="client-tel">Телефон</label>
+                    <span class="client-data__input-icon">
+                        <input class="client-data__input" type="tel" name="client-tel" id="client-tel">
+                        <svg class="client-data__icon">
                             <use href="./images/icons.svg#icon-phone-black"></use>
                         </svg>
                     </span>
                 </div>
                 <div class="client-data">
-                    <label class="label-text" for="client-mail">Почта  </label>
-                    <span class="client-input-icon">
-                        <input class="client-input" type="email" name="client-mail" id="client-mail">
-                        <svg class="modal-icon">
+                    <label class="client-data__label" for="client-mail">Почта  </label>
+                    <span class="client-data__input-icon">
+                        <input class="client-data__input" type="email" name="client-mail" id="client-mail">
+                        <svg class="client-data__icon">
                             <use href="./images/icons.svg#icon-email-black"></use>
                         </svg>
                     </span>
                 </div>
                 <div class="client-data">
-                    <label class="label-text" for="comments">Комментарий</label>
-                    <textarea class="client-comments"
+                    <label class="client-data__label" for="comments">Комментарий</label>
+                    <textarea class="client__comments"
                     name="client-comments" 
                     id="comments"
                     placeholder="Введите текст"
                     ></textarea>
                 </div>
                 <div class="checkbox-wrapper">
-                    <label for="checkbox" class="checkbox-label">
-                    <input class="input-checkbox visually-hidden" type="checkbox" id="checkbox" name="client-                   agreement" value="agreement">
+                    <label for="checkbox" class="checkbox__label">
+                    <input class="checkbox__input visually-hidden" type="checkbox" id="checkbox" name="client-                   agreement" value="agreement">
                     <span>
-                        <svg class="checkbox-icon" width="11" height="8">
+                        <svg class="checkbox__icon" width="11" height="8">
                             <use href="./images/icons.svg#icon-vector"></use>
                         </svg>
                     </span>

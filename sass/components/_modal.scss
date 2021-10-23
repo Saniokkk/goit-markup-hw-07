@@ -17,11 +17,10 @@
   transition-property: fill;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-close:hover,
-.btn-close:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .modal {
@@ -39,12 +38,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form {
+.modal__form {
   display: flex;
   flex-direction: column;
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -53,11 +52,11 @@
   margin-bottom: 12px;
 }
 
-.client-input-icon {
+.client-data__input-icon {
   position: relative;
 }
 
-.client-input {
+.client-data__input {
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
@@ -68,18 +67,17 @@
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+  }
+
+  &:focus + .client-data__icon {
+    fill: var(--accent-color);
+  }
 }
 
-.client-input:focus {
-  border: 1px solid var(--accent-color);
-  cursor: pointer;
-}
-
-.client-input:focus + .modal-icon {
-  fill: var(--accent-color);
-}
-
-.modal-icon {
+.client-data__icon {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -91,7 +89,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-comments {
+.client__comments {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -103,22 +101,21 @@
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
-.client-comments:focus {
-  border: 1px solid var(--accent-color);
-  cursor: pointer;
-}
-
-.client-comments::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.label-text {
+.client-data__label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -131,7 +128,7 @@
   justify-content: center;
 }
 
-.checkbox-label {
+.checkbox__label {
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
@@ -141,41 +138,38 @@
   /* position: relative; */
   align-items: center;
   cursor: pointer;
+  & span {
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  & a {
+    color: var(--accent-color);
+    margin-left: 5px;
+  }
 }
 
-.checkbox-label span {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: none;
+.checkbox__input {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:checked + span {
+    background: var(--accent-color);
+    border: none;
+  }
 }
 
-.checkbox-label a {
-  color: var(--accent-color);
-  margin-left: 5px;
-}
-
-.input-checkbox {
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-checkbox:checked + span {
-  background: var(--accent-color);
-  border: none;
-}
-
-.checkbox-label:hover span,
-.input-checkbox:focus + span {
+.checkbox__label:hover span,
+.checkbox__input:focus + span {
   border-color: var(--accent-color);
 }
 
@@ -197,9 +191,9 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: #188ce8;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
