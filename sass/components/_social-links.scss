@@ -18,9 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(background-color);
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -33,10 +31,7 @@
 .social-list__icon {
   width: 20px;
   height: 20px;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(fill);
   .social-list__link:hover &,
   .social-list__link:focus & {
     fill: #ffffff;

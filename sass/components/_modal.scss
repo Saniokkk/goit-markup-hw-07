@@ -14,9 +14,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition-property: fill;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(fill, 500ms);
   &:hover,
   &:focus {
     fill: var(--accent-color);
@@ -33,9 +31,7 @@
   min-width: 528px;
   min-height: 581px;
   background-color: #ffffff;
-  transition-property: transform;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(transform, 500ms);
 }
 
 .modal__form {
@@ -64,9 +60,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(border);
   &:focus {
     border: 1px solid var(--accent-color);
     cursor: pointer;
@@ -84,9 +78,7 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(fill);
 }
 
 .client__comments {
@@ -98,9 +90,7 @@
   border-radius: 4px;
   resize: none;
   outline: none;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(border);
   &:focus {
     border: 1px solid var(--accent-color);
     cursor: pointer;
@@ -148,9 +138,7 @@
     align-items: center;
     justify-content: center;
     outline: none;
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(border-color);
   }
   & a {
     color: var(--accent-color);
@@ -159,9 +147,7 @@
 }
 
 .checkbox__input {
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(border-color);
   &:checked + span {
     background: var(--accent-color);
     border: none;
@@ -188,9 +174,7 @@
   background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(background-color);
 
   &:hover,
   &:focus {
