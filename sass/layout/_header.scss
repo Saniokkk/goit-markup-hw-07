@@ -52,9 +52,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(color);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -74,9 +72,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(color);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -86,9 +82,7 @@
 .contacts-list__icon {
   fill: var(--text-color);
   margin-right: 10px;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(fill);
   .contacts-list__link:hover &,
   .contacts-list__link:focus & {
     fill: var(--accent-color);
